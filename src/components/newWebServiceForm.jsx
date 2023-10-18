@@ -41,12 +41,21 @@ const NewWebServiceForm = () => {
     <>
       <RtlMuiWrapper>
         <div className="mt-10" dir="rtl">
-          <TextField
-            id="outlined-multiline-flexible"
-            label="عنوان"
-            multiline
-            dir="rtl"
-            maxRows={4}
+          <Controller
+            control={control}
+            name="ReactDatepicker"
+            render={({ field: { onChange, onBlur, value, ref } }) => (
+              <TextField
+                id="outlined-multiline-flexible"
+                label="عنوان"
+                multiline
+                dir="rtl"
+                onChange={onChange}
+                onBlur={onBlur}
+                selected={value}
+                maxRows={4}
+              />
+            )}
           />
         </div>
       </RtlMuiWrapper>

@@ -40,13 +40,15 @@ const NewWebServiceForm = () => {
   return (
     <>
       <RtlMuiWrapper>
-        <TextField
-          id="outlined-multiline-flexible"
-          label="عنوان"
-          multiline
-          dir="rtl"
-          maxRows={4}
-        />
+        <div className="mt-10" dir="rtl">
+          <TextField
+            id="outlined-multiline-flexible"
+            label="عنوان"
+            multiline
+            dir="rtl"
+            maxRows={4}
+          />
+        </div>
       </RtlMuiWrapper>
     </>
   );
